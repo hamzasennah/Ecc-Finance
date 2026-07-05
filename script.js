@@ -142,7 +142,10 @@ function initPartners() {
       <ul class="spotlight-list">
         ${partner.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
       </ul>
-      <a class="button button-primary" href="mailto:club.finance@centrale-casablanca.ma?subject=Partenariat%20ECC%20Finance">Construire un partenariat</a>
+      <div class="spotlight-actions">
+        <a class="button button-primary" href="mailto:club.finance@centrale-casablanca.ma?subject=Partenariat%20ECC%20Finance">Construire un partenariat</a>
+        <a class="button button-secondary" href="assets/partner-pack-ecc-finance.pdf" download>Télécharger le dossier partenaire</a>
+      </div>
     `;
   };
 
@@ -154,8 +157,46 @@ function initPartners() {
   });
 }
 
+function initJoinForm() {
+  const form = document.querySelector("[data-join-form]");
+  const status = document.querySelector("[data-form-status]");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = data.get("name")?.toString().trim();
+    const track = data.get("track")?.toString().trim();
+    const year = data.get("year")?.toString().trim();
+    const domain = data.get("domain")?.toString().trim();
+    const motivation = data.get("motivation")?.toString().trim();
+
+    const body = [
+      "Bonjour ECC Finance,",
+      "",
+      "Je souhaite rejoindre le club / candidater au Research Desk.",
+      "",
+      `Nom: ${name}`,
+      `Filière: ${track}`,
+      `Année: ${year}`,
+      `Domaine préféré: ${domain}`,
+      "",
+      "Motivation:",
+      motivation,
+    ].join("\n");
+
+    const subject = encodeURIComponent(`Candidature ECC Finance - ${name}`);
+    window.location.href = `mailto:club.finance@centrale-casablanca.ma?subject=${subject}&body=${encodeURIComponent(body)}`;
+
+    if (status) {
+      status.textContent = "Votre client mail va s'ouvrir avec une candidature préremplie.";
+    }
+  });
+}
+
 initTicker();
 initHeader();
 initReveal();
 initFilters();
 initPartners();
+initJoinForm();

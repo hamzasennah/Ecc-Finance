@@ -5,7 +5,7 @@ Site officiel statique du club ECC Finance de l'École Centrale Casablanca.
 ## Sections
 
 - Club: mission, vision, axes opérationnels
-- Publications: futur blog d'analyses éducatives
+- Publications: articles courts et research desk étudiant
 - Partenaires: vitrine des collaborations et appel aux partenaires
 
 ## Publication

@@ -42,6 +42,8 @@ const partners = {
   },
 };
 
+const candidateEmail = "hamza.sennah@centrale-casablanca.ma";
+
 function initTicker() {
   const ticker = document.querySelector("[data-ticker]");
   if (!ticker) return;
@@ -186,10 +188,10 @@ function initJoinForm() {
     ].join("\n");
 
     const subject = encodeURIComponent(`Candidature ECC Finance - ${name}`);
-    window.location.href = `mailto:club.finance@centrale-casablanca.ma?subject=${subject}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${candidateEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
 
     if (status) {
-      status.textContent = "Votre client mail va s'ouvrir avec une candidature préremplie.";
+      status.textContent = `Votre client mail va s'ouvrir avec une candidature préremplie vers ${candidateEmail}.`;
     }
   });
 }

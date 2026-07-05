@@ -8,10 +8,18 @@ Site officiel statique du club ECC Finance de l'École Centrale Casablanca.
 - Publications: articles courts et research desk étudiant
 - Partenaires: vitrine des collaborations et appel aux partenaires
 
-## Publication
+## Publication GitHub Pages
 
-Le site est prêt pour GitHub Pages via `.github/workflows/pages.yml`.
-Après le push sur `main`, l'URL attendue est:
+Le site est prêt pour GitHub Pages via la branche `gh-pages`.
+
+Dans GitHub, activer:
+
+- Settings > Pages
+- Source: Deploy from a branch
+- Branch: `gh-pages`
+- Folder: `/ (root)`
+
+L'URL publique attendue est:
 
 `https://hamzasennah.github.io/Ecc-Finance/`
 

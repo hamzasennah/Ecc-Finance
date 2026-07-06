@@ -42,7 +42,7 @@ const partners = {
   },
 };
 
-const candidateEmail = "hamza.sennah@centrale-casablanca.ma";
+const clubEmail = "club.finance@centrale-casablanca.ma";
 
 function formSubmitEndpoint(email) {
   return `https://formsubmit.co/ajax/${encodeURIComponent(email)}`;
@@ -180,7 +180,7 @@ function initAjaxForms() {
   forms.forEach((form) => {
     const status = form.querySelector("[data-form-status]");
     const submit = form.querySelector("[type='submit']");
-    const email = form.dataset.email || candidateEmail;
+    const email = form.dataset.email || clubEmail;
     const subject = form.dataset.subject || "Message ECC Finance";
     const successMessage = form.dataset.success || "Votre message a bien été transmis.";
 

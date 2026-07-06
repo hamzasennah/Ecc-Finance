@@ -14,7 +14,7 @@ Site officiel statique du club ECC Finance de l'École Centrale Casablanca.
 
 ## Formulaires
 
-Les formulaires publics utilisent FormSubmit pour envoyer les candidatures et demandes de partenariat vers `hamza.sennah@centrale-casablanca.ma` depuis GitHub Pages, sans backend dédié.
+Les formulaires publics utilisent FormSubmit pour envoyer les candidatures et demandes de partenariat vers `club.finance@centrale-casablanca.ma` depuis GitHub Pages, sans backend dédié.
 
 ## Publication GitHub Pages
 
